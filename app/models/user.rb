@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   include Devise::JWT::RevocationStrategies::JTIMatcher
+
+  has_many :referrals, foreign_key: 'sender_id', class_name: 'Referral'
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,

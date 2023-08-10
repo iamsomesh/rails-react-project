@@ -66,6 +66,8 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    addressable (2.8.5)
+      public_suffix (>= 2.0.2, < 6.0)
     bcrypt (3.1.19)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
@@ -102,9 +104,11 @@ GEM
     io-console (0.6.0)
     irb (1.7.4)
       reline (>= 0.3.6)
-    jsonapi-serializer (2.2.0)
-      activesupport (>= 4.2)
     jwt (2.7.1)
+    launchy (2.5.2)
+      addressable (~> 2.8)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -132,6 +136,7 @@ GEM
     nokogiri (1.15.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    public_suffix (5.0.3)
     puma (5.6.6)
       nio4r (~> 2.0)
     racc (1.7.1)
@@ -198,7 +203,7 @@ DEPENDENCIES
   debug
   devise
   devise-jwt
-  jsonapi-serializer
+  letter_opener
   mysql2 (~> 0.5)
   puma (~> 5.0)
   rack-cors
